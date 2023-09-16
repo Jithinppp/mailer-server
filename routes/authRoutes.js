@@ -9,6 +9,9 @@ module.exports = (app) => {
       scope: ["profile", "email"],
     })
   );
+  app.get("/", (req, res) => {
+    res.send("hi");
+  });
   // 3.route for authentication callback route
   app.get(
     "/auth/google/callback",
